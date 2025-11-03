@@ -79,17 +79,6 @@ Your submission will be evaluated based on:
 - **Data Insights**: Ability to present meaningful trip and fleet insights
 - **User Experience**: Intuitive navigation and information presentation
 
-## What Your Dashboard Should Handle
-
-Your dashboard will work with 5 different trip types, each with unique characteristics:
-
-1. **Long Haul Trip** - Extended cross-country delivery with many events
-2. **Urban Trip** - Dense city delivery with frequent location updates  
-3. **Cancelled Trip** - Trip that gets cancelled partway through
-4. **Technical Issues Trip** - Trip with device problems and signal issues
-5. **Logistics Trip** - Regional delivery with fuel and operational events
-
-Focus on creating a clean, intuitive interface that displays trip progress, basic metrics, and handles the different event types present in your data.
 
 ## Submission Guidelines
 
@@ -109,14 +98,6 @@ Focus on creating a clean, intuitive interface that displays trip progress, basi
 2. **Study Event Types**: Review [FLEET_TRACKING_EVENT_TYPES.md](./FLEET_TRACKING_EVENT_TYPES.md) to understand the data structure
 3. **Plan Your Dashboard**: Design your approach for real-time visualization and event processing
 4. **Build & Deploy**: Implement your solution and deploy to a hosting platform
-
-## Technical Stack Flexibility
-
-Feel free to use any technology stack you prefer:
-- **Frontend**: React, Vue, Angular, Svelte, or vanilla JavaScript
-- **Mapping**: Leaflet, Mapbox, Google Maps, or OpenStreetMap
-- **Charts**: D3.js, Chart.js, Recharts, or any visualization library
-- **Deployment**: Vercel, Netlify, AWS, or any hosting platform
 
 ---
 
