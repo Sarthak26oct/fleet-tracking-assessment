@@ -122,7 +122,3 @@ Your submission will be evaluated based on:
 We encourage the use of AI and LLM tools for this assessment! However, you must understand what you're building and be able to explain your implementation decisions.
 
 ---
-
-## Technical Documentation
-
-For technical details about the data generator implementation, see [data-generator/TECHNICAL_README.md](./data-generator/TECHNICAL_README.md)

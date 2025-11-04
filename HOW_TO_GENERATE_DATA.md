@@ -47,6 +47,18 @@
 
 If you encounter issues generating data, pre-generated sample data is available in the `assessment-fallback-data/` folder at the root level. However, **generating your own unique dataset is highly recommended**.
 
+## Troubleshooting
+
+**If generation fails:**
+- Wait a few minutes and try again (API rate limits)
+- Check your internet connection
+- Use fallback data in `assessment-fallback-data/` folder
+
+**If you get Node.js errors:**
+- Update to Node.js v18+ from [nodejs.org](https://nodejs.org)
+
+**Expected generation time:** 2-5 minutes
+
 ## Technical Notes
 
 - **Routes are randomized** - Each generation creates different route combinations
