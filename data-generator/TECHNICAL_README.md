@@ -1,34 +1,34 @@
-# Fleet Tracking Event Generator
+# Fleet Tracking Assessment Data Generator
 
-This script generates realistic sample trip events for fleet tracking systems using real road routes from the OSRM (Open Source Routing Machine) API.
+This system generates realistic fleet tracking data for the assessment using real road routes from the OSRM (Open Source Routing Machine) API.
 
 ## Features
 
-- Fetches real driving routes between two coordinates using OSRM public API
-- Generates `location_ping` events with realistic GPS data along the route
-- Calculates realistic speed, heading, and movement data
-- Adds GPS accuracy variations and signal quality indicators
-- Outputs events in chronological order with proper timestamps
+- Fetches real driving routes between coordinates using OSRM public API
+- Generates comprehensive fleet tracking events with realistic GPS data
+- Creates diverse trip scenarios across different US regions
+- Produces chronologically ordered events with proper timestamps
+- Supports both single trip generation (development) and multi-trip assessment data
 
-## Current Implementation
+## Implementation Overview
 
-The script now generates **comprehensive fleet tracking events** with both specific and random placement logic. It creates a trip from San Francisco to Los Angeles with:
+The generator creates **comprehensive fleet tracking events** with both specific and random placement logic:
 
-**Specific Placement Events (~4,123 events):**
-- **4,096 location_ping events** (one every 30 seconds)
-- **4 trip lifecycle events** (tracking_started, trip_started, trip_completed, tracking_stopped)
-- **8 distance milestone events** (at 50km, 100km, 150km, etc. intervals)
-- **9 time milestone events** (at 1hr, 2hr, 4hr, etc. intervals - accounts for stopping time)
-- **6 scheduled stop events** (3 stops with arrival/departure at 25%, 50%, 75% of route)
+**Specific Placement Events:**
+- **Location ping events** (regular GPS updates every 30 seconds)
+- **Trip lifecycle events** (tracking_started, trip_started, trip_completed, tracking_stopped)
+- **Distance milestone events** (at regular distance intervals)
+- **Time milestone events** (at regular time intervals - accounts for stopping time)
+- **Scheduled stop events** (planned stops with arrival/departure)
 
-**Random Placement Events (~76 events):**
+**Random Placement Events:**
 - **Movement/Behavior Events**: speed_changed, speed_violation, vehicle_stopped, vehicle_moving, unscheduled_stop
 - **Technical/System Events**: signal_degraded, signal_lost/recovered, device_battery_low, device_overheating, device_error
 - **Conditional Events**: fuel_level_low, refueling_started/completed, trip_paused/resumed, vehicle_telemetry
-- **Trip Cancellation**: trip_cancelled (5% chance, early in trip - truncates all subsequent events)
+- **Trip Cancellation**: trip_cancelled (random chance, can truncate events)
 
-**Features:**
-- **~34 hour trip duration** (realistic for the 613km route)
+**Key Features:**
+- **Realistic trip durations** based on actual route distances
 - **Realistic GPS data**: speed, heading, accuracy, altitude, signal quality
 - **Smart time calculations**: Time milestones account for unscheduled stops
 - **Fuel consumption modeling**: Based on distance and consumption rate
@@ -62,7 +62,7 @@ npm run geojson
 ```
 
 5. The scripts will (run from `data-generator/` folder):
-   - **npm start**: Generate single comprehensive trip (SF→LA) for development/testing
+   - **npm start**: Generate single comprehensive trip for development/testing
    - **npm run assessment** / **npm run generate**: Generate 5 different trip scenarios for candidate assessment
    - **npm run geojson**: Process `trip-events.json` and create GeoJSON LineString feature files in `test/` folder
 
