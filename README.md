@@ -82,14 +82,27 @@ Your submission will be evaluated based on:
 
 ## Submission Guidelines
 
-- Fork this repository to your GitHub account
+**Repository Setup (choose one approach):**
+
+**Option 1: Clean Fork**
+- Fork this repository and remove all generator code (`data-generator/`, `HOW_TO_GENERATE_DATA.md`, etc.)
+- Keep only your generated trip data files (if required) and your dashboard implementation
+- Update the README with your dashboard description and live URL
+
+**Option 2: New Repository** 
+- Create a new private repository for your dashboard implementation
+- Copy your generated trip data files to your new repository
+- Create your own README describing your dashboard and include the live URL
+
+**For both approaches:**
 - Complete your fleet tracking dashboard implementation
 - Deploy the dashboard to a hosting platform
-- Update this README with the URL to your live dashboard
 - **Repository Access:** Keep your repository private to avoid visibility by other candidates. Add the following email addresses as collaborators:
   - vedantp@mapup.ai
   - ajayap@mapup.ai  
   - atharvd@mapup.ai
+  - karkuvelpandip@mapup.ai
+
 - Finally, please fill out the google form that you received via email to submit the assessment for review
 
 ## Getting Started
